@@ -193,7 +193,7 @@ function renderCartDrawer() {
   if (cart.length === 0) {
     container.innerHTML = `
       <div class="cart-empty">
-        <div class="cart-empty-icon">🛍️</div>
+        <div class="cart-empty-icon">${icon('cart', 'icon-xl')}</div>
         <p style="font-weight:700; margin-bottom:0.5rem;">Your cart is empty</p>
         <p style="font-size:0.85rem; color:#999;">Add some items to get started!</p>
         <a href="shop.html" class="btn btn-primary btn-sm" style="margin-top:1rem;">Start Shopping</a>
@@ -222,7 +222,7 @@ function renderCartDrawer() {
             <button class="qty-btn" onclick="updateCartQty(${item.product.id}, 1)">+</button>
           </div>
         </div>
-        <button onclick="removeFromCart(${item.product.id})" style="background:none; border:none; color:#999; cursor:pointer; font-size:1rem;">×</button>
+        <button onclick="removeFromCart(${item.product.id})" style="background:none; border:none; color:#999; cursor:pointer; font-size:1rem;">${icon('x')}</button>
       </div>
     `;
   }).join('');
@@ -268,14 +268,14 @@ function renderProductCard(product) {
         <img src="${product.image}" alt="${product.name}" loading="lazy">
         ${product.badge ? `<div class="product-badge ${badgeClass}">${product.badge}</div>` : ''}
         ${product.discount ? `<div class="product-discount">-${product.discount}%</div>` : ''}
-        <button class="product-wishlist ${isWish ? 'active' : ''}" data-id="${product.id}" onclick="event.stopPropagation(); toggleWishlist(${product.id});" aria-label="Wishlist">❤️</button>
+        <button class="product-wishlist ${isWish ? 'active' : ''}" data-id="${product.id}" onclick="event.stopPropagation(); toggleWishlist(${product.id});" aria-label="Wishlist">${icon('heart')}</button>
       </div>
       <div class="product-info">
         <div class="product-brand">${product.brand}</div>
         <div class="product-name line-clamp-2">${product.name}</div>
         <div class="product-rating">
           <div class="stars">
-            ${Array.from({length: 5}).map((_, i) => `<span class="star ${i < Math.floor(product.rating) ? 'filled' : 'empty'}">★</span>`).join('')}
+            ${Array.from({length: 5}).map((_, i) => `<span class="star ${i < Math.floor(product.rating) ? 'filled' : 'empty'}">${icon('star', 'icon-fill')}</span>`).join('')}
           </div>
           <span style="color:#999; font-size:0.75rem;">(${product.reviews.toLocaleString()})</span>
         </div>
@@ -361,7 +361,7 @@ function initShopPage() {
   if (pillsContainer) {
     let pillsHTML = `<button class="pill ${currentCategory === 'all' ? 'active' : ''}" data-cat="all">All Products</button>`;
     pillsHTML += storeData.categories.map(c => `
-      <button class="pill ${currentCategory === c.id ? 'active' : ''}" data-cat="${c.id}">${c.icon} ${c.name}</button>
+      <button class="pill ${currentCategory === c.id ? 'active' : ''}" data-cat="${c.id}">${icon(c.icon)} ${c.name}</button>
     `).join('');
     pillsContainer.innerHTML = pillsHTML;
 
@@ -406,7 +406,7 @@ function initShopPage() {
     if (countEl) countEl.textContent = `${list.length} products found`;
     if (grid) {
       if (list.length === 0) {
-        grid.innerHTML = `<div style="grid-column: 1/-1; text-align:center; padding: 4rem 0;"><p style="font-size:2rem; margin-bottom:1rem;">🔍</p><h3>No products found</h3><p style="color:#999;">Try a different search or filter.</p></div>`;
+        grid.innerHTML = `<div style="grid-column: 1/-1; text-align:center; padding: 4rem 0;"><p style="margin-bottom:1rem;">${icon('search', 'icon-xl')}</p><h3>No products found</h3><p style="color:#999;">Try a different search or filter.</p></div>`;
       } else {
         grid.innerHTML = list.map(renderProductCard).join('');
       }
@@ -454,14 +454,14 @@ function initProductPage() {
   const featuresTab = document.getElementById('tab-features');
   if (featuresTab && product.features) {
     featuresTab.innerHTML = `<div class="features-list">
-      ${product.features.map(f => `<div class="feature-item"><span class="feature-item-icon">✓</span><span class="feature-item-text">${f}</span></div>`).join('')}
+      ${product.features.map(f => `<div class="feature-item"><span class="feature-item-icon">${icon('check')}</span><span class="feature-item-text">${f}</span></div>`).join('')}
     </div>`;
   }
 
   const boxTab = document.getElementById('tab-box');
   if (boxTab && product.whatsInBox) {
     boxTab.innerHTML = `<div class="box-items">
-      ${product.whatsInBox.map(b => `<div class="box-item">📦 ${b}</div>`).join('')}
+      ${product.whatsInBox.map(b => `<div class="box-item">${icon('box')} ${b}</div>`).join('')}
     </div>`;
   }
 
@@ -549,7 +549,7 @@ function initCheckoutPage() {
         localStorage.removeItem('cell2u_cart');
         document.getElementById('checkout-form-container').innerHTML = `
           <div style="text-align:center; padding: 3rem 0;">
-            <div style="width:5rem; height:5rem; background:#dcfce7; color:#16a34a; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:2.5rem; margin:0 auto 1.5rem;">✓</div>
+            <div style="width:5rem; height:5rem; background:#dcfce7; color:#16a34a; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:2.5rem; margin:0 auto 1.5rem;">${icon('check', 'icon-xl')}</div>
             <h2 style="font-family:var(--font-display); font-size:1.75rem; margin-bottom:0.5rem;">Order Placed Successfully!</h2>
             <p style="color:var(--text-grey); margin-bottom:1.5rem;">Thank you for your purchase. We have received your order simulation.</p>
             <a href="index.html" class="btn btn-primary">Return to Home</a>

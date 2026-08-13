@@ -2522,3 +2522,35 @@ footer {
     flex-direction: column;
   }
 }
+
+/* ===== ICON SYSTEM ===== */
+.icon {
+  width: 1em;
+  height: 1em;
+  display: inline-block;
+  flex: 0 0 auto;
+  vertical-align: -0.14em;
+  stroke: currentColor;
+  fill: none;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.icon-lg { width: 1.35em; height: 1.35em; }
+.icon-xl { width: 2.5rem; height: 2.5rem; }
+.icon-fill { fill: currentColor; stroke: none; }
+.nav-btn .icon { width: 1.2rem; height: 1.2rem; }
+.btn .icon { width: 1rem; height: 1rem; }
+.badge .icon { width: 0.95rem; height: 0.95rem; }
+.product-badge .icon { width: 0.8rem; height: 0.8rem; }
+.floating-btn .icon { width: 1.2rem; height: 1.2rem; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}

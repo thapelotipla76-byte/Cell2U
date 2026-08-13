@@ -350,20 +350,20 @@
     }
   ],
   "categories": [
-    { "id": "smartphones", "name": "Smartphones", "icon": "📱" },
-    { "id": "audio", "name": "Audio", "icon": "🎧" },
-    { "id": "smartwatches", "name": "Smart Watches", "icon": "⌚" },
-    { "id": "chargers", "name": "Chargers", "icon": "🔌" },
-    { "id": "tablets", "name": "Tablets", "icon": "📲" },
-    { "id": "accessories", "name": "Accessories", "icon": "🎁" }
+    { "id": "smartphones", "name": "Smartphones", "icon": "smartphone" },
+    { "id": "audio", "name": "Audio", "icon": "headphones" },
+    { "id": "smartwatches", "name": "Smart Watches", "icon": "watch" },
+    { "id": "chargers", "name": "Chargers", "icon": "plug" },
+    { "id": "tablets", "name": "Tablets", "icon": "tablet" },
+    { "id": "accessories", "name": "Accessories", "icon": "gift" }
   ],
   "brands": [
-    { "name": "Apple", "logo": "🍎" },
-    { "name": "Samsung", "logo": "📱" },
-    { "name": "Google", "logo": "🔍" },
-    { "name": "Xiaomi", "logo": "📱" },
-    { "name": "OnePlus", "logo": "⚡" },
-    { "name": "Realme", "logo": "🚀" },
-    { "name": "Anker", "logo": "🔋" }
+    { "name": "Apple", "logo": "apple" },
+    { "name": "Samsung", "logo": "smartphone" },
+    { "name": "Google", "logo": "search" },
+    { "name": "Xiaomi", "logo": "smartphone" },
+    { "name": "OnePlus", "logo": "zap" },
+    { "name": "Realme", "logo": "sparkles" },
+    { "name": "Anker", "logo": "plug" }
   ]
 }
