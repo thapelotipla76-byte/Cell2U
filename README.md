@@ -58,5 +58,5 @@ cell2u-vanilla/
 
 ## 💡 Notes
 
-- **Images**: Product images use high-quality Unsplash URLs for instant loading. You can replace them anytime in `data/products.json` with your own image URLs.
+- **Images**: Product images are bundled in the `images/` directory and sourced from free Unsplash photography. Replace them anytime in `data/products.json` with your own owned image files or URLs.
 - **Checkout**: As requested, checkout is a fully interactive simulation with local storage cart clearance and success messaging—no backend payment gateway required.
