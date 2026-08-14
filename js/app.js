@@ -222,11 +222,10 @@ function renderCartDrawer() {
     `;
   }).join('');
 
-  const shipping = subtotal >= 1000 || subtotal === 0 ? 0 : 99;
-  const total = subtotal + shipping;
+  const total = subtotal;
 
   if (subtotalEl) subtotalEl.textContent = `R${subtotal.toLocaleString()}`;
-  if (shippingEl) shippingEl.textContent = shipping === 0 ? 'FREE' : `R${shipping}`;
+  if (shippingEl) shippingEl.textContent = '';
   if (totalEl) totalEl.textContent = `R${total.toLocaleString()}`;
 }
 

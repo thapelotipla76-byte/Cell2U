@@ -14,7 +14,7 @@ Open `data/config.js` in any text editor to customize:
 * **`whatsappPool`**: An array of multiple WhatsApp numbers with `label`, `enabled` status, and `priority`. When customers click "Order via WhatsApp" or enquiry buttons, the store automatically rotates incoming inquiries between enabled numbers using a persistent round-robin distribution.
 * **`whatsappFallback`**: A dedicated backup number used if all numbers in the pool are disabled.
 * **`whatsappDisplay`**: The customer-facing phone number shown in the header, footer, and contact section.
-* **`supportEmail`**: Your customer support email address.
+* **Customer Support**: Managed via WhatsApp and telephone enquiries.
 * **`operatingHours`**: Your store hours.
 * **`enableOnlinePayment`**: Kept `false` to ensure the storefront operates exclusively on direct WhatsApp enquiries and orders.
 
@@ -60,3 +60,23 @@ Because Cell2U is built as a pure static site (HTML, CSS, JavaScript, and JSON),
 2. Go to your repository **Settings** → **Pages**.
 3. Under **Build and deployment**, select **Deploy from a branch**, choose `main` branch and `/ (root)` folder, then click **Save**.
 4. Your live store will update within seconds whenever you push new changes or catalogue updates.
+
+
+---
+
+## 4. Making Your Store Easy to Find on Google (SEO & Indexing)
+
+To ensure your GitHub Pages store appears prominently in Google search results:
+
+1. **Submit to Google Search Console**:
+   * Go to [Google Search Console](https://search.google.com/search-console).
+   * Add your GitHub Pages URL (e.g., `https://thapelotipla76-byte.github.io/Cell2U/`).
+   * Verify ownership via HTML tag or file upload.
+   * Submit your sitemap (`https://thapelotipla76-byte.github.io/Cell2U/sitemap.xml`) for fast crawling.
+
+2. **Custom Domain (Recommended for Top Rankings)**:
+   * While GitHub Pages URLs (`*.github.io`) rank on Google, purchasing a custom domain (e.g., `cell2u.co.za`) and binding it in your repository Settings → Pages significantly improves brand trust and search ranking potential.
+
+3. **SEO Meta Tags & Sitemap**:
+   * The included `robots.txt` and `sitemap.xml` files guide search engine bots automatically.
+   * Every page includes optimized title tags, meta descriptions, Open Graph data, and canonical links.

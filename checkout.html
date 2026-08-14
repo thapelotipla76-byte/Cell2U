@@ -55,7 +55,7 @@
             <input type="tel" id="cust-phone" required placeholder="+27 82 123 4567" style="width:100%; padding:0.75rem; border:1px solid var(--border-grey); border-radius:0.75rem; font-size:0.95rem;">
           </div>
           <div>
-            <label style="display:block; font-size:0.85rem; font-weight:600; color:#111; margin-bottom:0.4rem;">Delivery City / Suburb *</label>
+            <label style="display:block; font-size:0.85rem; font-weight:600; color:#111; margin-bottom:0.4rem;">City / Location *</label>
             <input type="text" id="cust-city" required placeholder="Johannesburg" style="width:100%; padding:0.75rem; border:1px solid var(--border-grey); border-radius:0.75rem; font-size:0.95rem;">
           </div>
         </div>
@@ -161,9 +161,9 @@
         `*Payment Method:* ${paymentMethod}\n\n` +
         `*Items Ordered:*\n${itemsText}\n\n` +
         `*Total:* R${total.toLocaleString()}\n\n` +
-        `Please confirm availability and delivery!`;
+        `Please confirm availability!`;
 
-      const phoneNumber = window.CELL2U_CONFIG?.whatsappNumber || '+27123456789';
+      const phoneNumber = (typeof window.getCell2UWhatsAppNumber === 'function') ? window.getCell2UWhatsAppNumber() : (window.CELL2U_CONFIG?.whatsappNumber || '+27123456789');
       const cleanNumber = phoneNumber.replace(/[^0-9]/g, '');
       const encoded = encodeURIComponent(message);
       

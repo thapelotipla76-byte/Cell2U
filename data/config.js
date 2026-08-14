@@ -15,7 +15,7 @@ window.CELL2U_CONFIG = {
   // Fallback number used if active pool numbers are disabled
   whatsappFallback: "+27123456789",
   
-  supportEmail: "support@cell2u.co.za",
+  // supportEmail removed
   operatingHours: "Mon-Fri: 8am-6pm | Sat: 9am-2pm",
   currency: "R",
   enableOnlinePayment: false
