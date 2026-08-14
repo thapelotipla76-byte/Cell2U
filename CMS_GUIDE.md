@@ -11,7 +11,8 @@ All store-wide configuration, operating hours, support email, and your primary W
 📁 **Location:** `data/config.js`
 
 Open `data/config.js` in any text editor to customize:
-* **`whatsappNumber`**: Enter your WhatsApp business phone number in international format (e.g., `+27123456789`). When customers click "Order via WhatsApp" or use the enquiry buttons, the site automatically formats their cart items and total into a clean message sent directly to this number.
+* **`whatsappPool`**: An array of multiple WhatsApp numbers with `label`, `enabled` status, and `priority`. When customers click "Order via WhatsApp" or enquiry buttons, the store automatically rotates incoming inquiries between enabled numbers using a persistent round-robin distribution.
+* **`whatsappFallback`**: A dedicated backup number used if all numbers in the pool are disabled.
 * **`whatsappDisplay`**: The customer-facing phone number shown in the header, footer, and contact section.
 * **`supportEmail`**: Your customer support email address.
 * **`operatingHours`**: Your store hours.

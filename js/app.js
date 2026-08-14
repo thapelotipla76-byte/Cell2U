@@ -15,6 +15,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     initNavbar();
     initCartDrawer();
     initFloatingActions();
+    initWhatsAppRouting();
     
     const path = window.location.pathname;
     if (path.includes('shop.html')) {
@@ -242,6 +243,24 @@ function initFloatingActions() {
     backToTop.addEventListener('click', () => {
       window.scrollTo({ top: 0, behavior: 'smooth' });
     });
+  }
+}
+
+function initWhatsAppRouting() {
+  const getNum = () => {
+    return (typeof window.getCell2UWhatsAppNumber === 'function') 
+      ? window.getCell2UWhatsAppNumber().replace(/[^0-9]/g, '') 
+      : '27123456789';
+  };
+
+  const floating = document.getElementById('floating-whatsapp-link');
+  if (floating) {
+    floating.href = `https://wa.me/${getNum()}?text=` + encodeURIComponent("Hello Cell2U! I have an enquiry about your devices.");
+  }
+
+  const footerLink = document.getElementById('footer-whatsapp-link');
+  if (footerLink) {
+    footerLink.href = `https://wa.me/${getNum()}?text=` + encodeURIComponent("Hello Cell2U! I need support with an order.");
   }
 }
 
