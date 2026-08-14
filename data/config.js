@@ -7,9 +7,9 @@ window.CELL2U_CONFIG = {
   
   // WhatsApp Sales & Support Numbers Pool (Round-Robin with Fallback)
   whatsappPool: [
-    { number: "+27123456789", label: "Sales Line 1", enabled: true, priority: 1 },
-    { number: "+27829876543", label: "Sales Line 2", enabled: true, priority: 2 },
-    { number: "+27712223344", label: "Support & Dispatch", enabled: true, priority: 3 }
+    { number: "+27792955371", label: "Sales Line 1", enabled: true, priority: 1 },
+    { number: "+27814637827", label: "Sales Line 2", enabled: true, priority: 2 },
+    { number: "+27715736728", label: "Support & Dispatch", enabled: true, priority: 3 }
   ],
   
   // Fallback number used if active pool numbers are disabled
