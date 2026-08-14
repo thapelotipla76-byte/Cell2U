@@ -3,154 +3,176 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Checkout | Cell2U</title>
+  <title>WhatsApp Order Enquiry | Cell2U</title>
   <link rel="stylesheet" href="css/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
 <body style="background-color:#F8F9FB;">
 
-  <!-- Checkout Header -->
-  <div class="checkout-header">
+  <!-- Header -->
+  <header style="background:white; border-bottom:1px solid var(--border-grey); padding:1rem 0;">
     <div class="container" style="display:flex; justify-content:space-between; align-items:center;">
-      <a href="index.html" class="logo">
-        <div class="logo-icon">C2U</div>
-        <span class="logo-text">Cell<span class="highlight">2</span>U</span>
+      <a href="index.html" class="logo" style="text-decoration:none; display:flex; align-items:center; gap:0.5rem;">
+        <div style="background:#111; color:white; font-weight:800; padding:0.35rem 0.6rem; border-radius:0.5rem; font-family:'Manrope',sans-serif;">C2U</div>
+        <span style="font-family:'Manrope',sans-serif; font-weight:800; font-size:1.25rem; color:#111;">Cell<span style="color:#0099CC">2</span>U</span>
       </a>
-      <a href="shop.html" style="font-size:0.9rem; font-weight:600; color:var(--text-grey); text-decoration:none;">← Back to Shop</a>
+      <a href="shop.html" style="font-size:0.9rem; font-weight:600; color:var(--text-grey); text-decoration:none;">← Continue Shopping</a>
+    </div>
+  </header>
+
+  <div class="container" style="max-width:800px; padding:3rem 1rem;">
+    <div style="text-align:center; margin-bottom:2.5rem;">
+      <div style="display:inline-flex; background:#25D366; color:white; width:64px; height:64px; border-radius:50%; align-items:center; justify-content:center; margin-bottom:1rem; box-shadow:0 10px 25px rgba(37,211,102,0.3);">
+        <span data-icon="whatsapp" style="width:32px; height:32px; display:inline-block;"></span>
+      </div>
+      <h1 style="font-family:'Manrope',sans-serif; font-weight:800; font-size:2rem; color:#111; margin-bottom:0.5rem;">Complete Your Order via WhatsApp</h1>
+      <p style="color:var(--text-grey); font-size:0.95rem; max-width:500px; margin:0 auto;">No online payment required. Fill in your details below and send your order straight to our WhatsApp sales team for instant confirmation and delivery scheduling.</p>
+    </div>
+
+    <div style="background:white; border-radius:1.5rem; padding:2rem; box-shadow:0 4px 20px rgba(0,0,0,0.04); border:1px solid var(--border-grey);">
+      <form id="whatsapp-order-form" onsubmit="submitWhatsAppOrder(event)">
+        
+        <div style="font-family:'Manrope',sans-serif; font-weight:700; font-size:1.1rem; color:#111; margin-bottom:1.25rem; padding-bottom:0.5rem; border-bottom:1px solid var(--border-grey);">
+          1. Customer Information
+        </div>
+        
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:1rem; margin-bottom:1rem;">
+          <div>
+            <label style="display:block; font-size:0.85rem; font-weight:600; color:#111; margin-bottom:0.4rem;">First Name *</label>
+            <input type="text" id="cust-name" required placeholder="Thabo" style="width:100%; padding:0.75rem; border:1px solid var(--border-grey); border-radius:0.75rem; font-size:0.95rem;">
+          </div>
+          <div>
+            <label style="display:block; font-size:0.85rem; font-weight:600; color:#111; margin-bottom:0.4rem;">Last Name *</label>
+            <input type="text" id="cust-surname" required placeholder="Molefe" style="width:100%; padding:0.75rem; border:1px solid var(--border-grey); border-radius:0.75rem; font-size:0.95rem;">
+          </div>
+        </div>
+
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:1rem; margin-bottom:1.5rem;">
+          <div>
+            <label style="display:block; font-size:0.85rem; font-weight:600; color:#111; margin-bottom:0.4rem;">Phone Number *</label>
+            <input type="tel" id="cust-phone" required placeholder="+27 82 123 4567" style="width:100%; padding:0.75rem; border:1px solid var(--border-grey); border-radius:0.75rem; font-size:0.95rem;">
+          </div>
+          <div>
+            <label style="display:block; font-size:0.85rem; font-weight:600; color:#111; margin-bottom:0.4rem;">Delivery City / Suburb *</label>
+            <input type="text" id="cust-city" required placeholder="Johannesburg" style="width:100%; padding:0.75rem; border:1px solid var(--border-grey); border-radius:0.75rem; font-size:0.95rem;">
+          </div>
+        </div>
+
+        <div style="font-family:'Manrope',sans-serif; font-weight:700; font-size:1.1rem; color:#111; margin-bottom:1.25rem; padding-bottom:0.5rem; border-bottom:1px solid var(--border-grey);">
+          2. Order Summary
+        </div>
+
+        <div id="checkout-cart-summary" style="background:#F8F9FB; border-radius:1rem; padding:1.25rem; margin-bottom:1.5rem;">
+          <!-- Cart items injected by JS -->
+        </div>
+
+        <div style="font-family:'Manrope',sans-serif; font-weight:700; font-size:1.1rem; color:#111; margin-bottom:1.25rem; padding-bottom:0.5rem; border-bottom:1px solid var(--border-grey);">
+          3. Preferred Payment Method (Discuss on WhatsApp)
+        </div>
+
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:1rem; margin-bottom:2rem;">
+          <label style="display:flex; align-items:center; gap:0.75rem; padding:1rem; border:2px solid var(--brand-blue); border-radius:1rem; background:#E8F7FF; cursor:pointer;">
+            <input type="radio" name="payment" value="EFT / Bank Transfer" checked style="accent-color:#0099CC;">
+            <div>
+              <p style="font-weight:700; font-size:0.9rem; color:#111;">EFT / Bank Transfer</p>
+              <p style="font-size:0.75rem; color:var(--text-grey);">Send proof of payment via WhatsApp</p>
+            </div>
+          </label>
+          <label style="display:flex; align-items:center; gap:0.75rem; padding:1rem; border:1px solid var(--border-grey); border-radius:1rem; background:white; cursor:pointer;">
+            <input type="radio" name="payment" value="Cash on Delivery / Pickup" style="accent-color:#0099CC;">
+            <div>
+              <p style="font-weight:700; font-size:0.9rem; color:#111;">COD / In-Store</p>
+              <p style="font-size:0.75rem; color:var(--text-grey);">Arrange on WhatsApp</p>
+            </div>
+          </label>
+        </div>
+
+        <button type="submit" style="width:100%; background:#25D366; color:white; border:none; padding:1rem; border-radius:1rem; font-family:'Manrope',sans-serif; font-weight:800; font-size:1.05rem; display:flex; align-items:center; justify-content:center; gap:0.5rem; cursor:pointer; box-shadow:0 4px 15px rgba(37,211,102,0.3); transition:background 0.2s;">
+          <span data-icon="whatsapp" style="width:20px; height:20px; display:inline-block;"></span>
+          Send Order to WhatsApp Now
+        </button>
+      </form>
     </div>
   </div>
 
-  <div class="container checkout-container">
-    <h1>Checkout</h1>
-
-    <!-- Step indicator -->
-    <div class="step-indicator">
-      <div class="step">
-        <div class="step-circle active">1</div>
-        <div class="step-label active">Details</div>
-        <div class="step-connector"></div>
-      </div>
-      <div class="step">
-        <div class="step-circle inactive">2</div>
-        <div class="step-label">Shipping</div>
-        <div class="step-connector"></div>
-      </div>
-      <div class="step">
-        <div class="step-circle inactive">3</div>
-        <div class="step-label">Payment</div>
-        <div class="step-connector"></div>
-      </div>
-      <div class="step">
-        <div class="step-circle inactive">4</div>
-        <div class="step-label">Review</div>
-      </div>
-    </div>
-
-    <div class="checkout-grid">
-      <!-- Form container -->
-      <div class="checkout-form" id="checkout-form-container">
-        <!-- Step 1: Details -->
-        <div class="checkout-step-content" id="step-1">
-          <div class="form-section-title">Customer Details</div>
-          <div class="form-row-2">
-            <div class="form-group">
-              <label>First Name</label>
-              <input type="text" placeholder="John" required>
-            </div>
-            <div class="form-group">
-              <label>Last Name</label>
-              <input type="text" placeholder="Doe" required>
-            </div>
-          </div>
-          <div class="form-group">
-            <label>Email Address</label>
-            <input type="email" placeholder="john@email.com" required>
-          </div>
-          <div class="form-group">
-            <label>Phone Number</label>
-            <input type="tel" placeholder="+27 82 123 4567" required>
-          </div>
-        </div>
-
-        <!-- Step 2: Shipping -->
-        <div class="checkout-step-content" id="step-2" style="display:none;">
-          <div class="form-section-title">Shipping Address</div>
-          <div class="form-group">
-            <label>Street Address</label>
-            <input type="text" placeholder="123 Main Street">
-          </div>
-          <div class="form-row-2">
-            <div class="form-group">
-              <label>City</label>
-              <input type="text" placeholder="Johannesburg">
-            </div>
-            <div class="form-group">
-              <label>Province</label>
-              <select style="width:100%; padding:0.75rem; border:1px solid var(--border-grey); border-radius:0.75rem; background:white;">
-                <option>Gauteng</option>
-                <option>Western Cape</option>
-                <option>KwaZulu-Natal</option>
-                <option>Eastern Cape</option>
-              </select>
-            </div>
-          </div>
-          <div class="form-group">
-            <label>Postal Code</label>
-            <input type="text" placeholder="2000">
-          </div>
-        </div>
-
-        <!-- Step 3: Payment Simulation -->
-        <div class="checkout-step-content" id="step-3" style="display:none;">
-          <div class="form-section-title">Payment Information (Simulation)</div>
-          <div class="form-group">
-            <label>Card Number</label>
-            <input type="text" placeholder="4242 4242 4242 4242">
-          </div>
-          <div class="form-row-2">
-            <div class="form-group">
-              <label>Expiry Date</label>
-              <input type="text" placeholder="MM/YY">
-            </div>
-            <div class="form-group">
-              <label>CVV</label>
-              <input type="text" placeholder="123">
-            </div>
-          </div>
-          <div style="background:#dcfce7; color:#16a34a; padding:0.75rem; border-radius:0.75rem; font-size:0.85rem; margin-top:1rem;">
-            <span data-icon="lock"></span> Secure SSL Simulation. No real charges will be made.
-          </div>
-        </div>
-
-        <!-- Step 4: Review -->
-        <div class="checkout-step-content" id="step-4" style="display:none;">
-          <div class="form-section-title">Order Review</div>
-          <p style="color:var(--text-grey); font-size:0.9rem; margin-bottom:1rem;">Please review your items and details before placing your order.</p>
-          <div style="background:#f9f9f9; padding:1rem; border-radius:0.75rem; font-size:0.9rem;">
-            <p><strong>Delivery:</strong> Standard Nationwide Delivery (2–4 business days)</p>
-            <p><strong>Payment Method:</strong> Simulated Credit Card</p>
-          </div>
-        </div>
-
-        <!-- Actions -->
-        <div class="checkout-actions">
-          <button class="btn btn-secondary" id="checkout-back-btn" style="display:none;">Back</button>
-          <button class="btn btn-primary" id="checkout-next-btn">Continue</button>
-        </div>
-      </div>
-
-      <!-- Summary sidebar -->
-      <div class="checkout-summary">
-        <div class="summary-title">Order Summary</div>
-        <div class="summary-items" id="checkout-summary-items"></div>
-        <div class="summary-divider"></div>
-        <div class="summary-row"><span>Subtotal</span><span id="checkout-subtotal">R0</span></div>
-        <div class="summary-row"><span>Shipping</span><span id="checkout-shipping">R0</span></div>
-        <div class="summary-row total"><span>Total</span><span id="checkout-total">R0</span></div>
-      </div>
-    </div>
-  </div>
-
+  <script src="data/config.js"></script>
   <script src="js/icons.js"></script>
   <script src="js/app.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      renderCheckoutSummary();
+    });
+
+    function renderCheckoutSummary() {
+      const container = document.getElementById('checkout-cart-summary');
+      const cart = Cell2UStore.getCart();
+      if (!cart || cart.length === 0) {
+        container.innerHTML = '<p style="color:var(--text-grey); font-size:0.9rem; text-align:center;">Your cart is empty. <a href="shop.html" style="color:var(--brand-blue); font-weight:600;">Go to shop</a></p>';
+        return;
+      }
+      let html = '<div style="display:flex; flex-direction:column; gap:0.75rem; margin-bottom:1rem;">';
+      let total = 0;
+      cart.forEach(item => {
+        const itemTotal = item.price * item.quantity;
+        total += itemTotal;
+        html += `
+          <div style="display:flex; justify-content:space-between; align-items:center; font-size:0.9rem;">
+            <div>
+              <span style="font-weight:600; color:#111;">${item.name}</span>
+              <span style="color:var(--text-grey); font-size:0.8rem; margin-left:0.5rem;">(x${item.quantity})</span>
+            </div>
+            <span style="font-family:'Manrope',sans-serif; font-weight:700; color:#111;">R${itemTotal.toLocaleString()}</span>
+          </div>
+        `;
+      });
+      html += '</div>';
+      html += `
+        <div style="border-top:1px solid var(--border-grey); padding-top:0.75rem; display:flex; justify-content:space-between; align-items:center;">
+          <span style="font-family:'Manrope',sans-serif; font-weight:800; color:#111;">Total Amount</span>
+          <span style="font-family:'Manrope',sans-serif; font-weight:800; font-size:1.25rem; color:#0099CC;">R${total.toLocaleString()}</span>
+        </div>
+      `;
+      container.innerHTML = html;
+    }
+
+    function submitWhatsAppOrder(event) {
+      event.preventDefault();
+      const name = document.getElementById('cust-name').value.trim();
+      const surname = document.getElementById('cust-surname').value.trim();
+      const phone = document.getElementById('cust-phone').value.trim();
+      const city = document.getElementById('cust-city').value.trim();
+      const paymentMethod = document.querySelector('input[name="payment"]:checked').value;
+
+      const cart = Cell2UStore.getCart();
+      if (!cart || cart.length === 0) {
+        alert('Your cart is empty!');
+        return;
+      }
+
+      let itemsText = cart.map(item => `• ${item.name} (Qty: ${item.quantity}) - R${(item.price * item.quantity).toLocaleString()}`).join('\n');
+      let total = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+
+      const message = `*NEW CELL2U ORDER ENQUIRY*\n\n` +
+        `*Customer:* ${name} ${surname}\n` +
+        `*Phone:* ${phone}\n` +
+        `*Delivery City:* ${city}\n` +
+        `*Payment Method:* ${paymentMethod}\n\n` +
+        `*Items Ordered:*\n${itemsText}\n\n` +
+        `*Total:* R${total.toLocaleString()}\n\n` +
+        `Please confirm availability and delivery!`;
+
+      const phoneNumber = window.CELL2U_CONFIG?.whatsappNumber || '+27123456789';
+      const cleanNumber = phoneNumber.replace(/[^0-9]/g, '');
+      const encoded = encodeURIComponent(message);
+      
+      // Clear cart
+      localStorage.removeItem('cell2u_cart');
+
+      // Open WhatsApp
+      window.location.href = `https://wa.me/${cleanNumber}?text=${encoded}`;
+    }
+  </script>
 </body>
 </html>
