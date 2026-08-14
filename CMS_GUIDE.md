@@ -80,3 +80,24 @@ To ensure your GitHub Pages store appears prominently in Google search results:
 3. **SEO Meta Tags & Sitemap**:
    * The included `robots.txt` and `sitemap.xml` files guide search engine bots automatically.
    * Every page includes optimized title tags, meta descriptions, Open Graph data, and canonical links.
+
+
+---
+
+## 5. Deploying to Vercel (For a Cleaner `.vercel.app` Link)
+
+If you prefer deploying Cell2U to Vercel for a professional, clean subdomain URL instead of GitHub Pages:
+
+1. **Connect Vercel to GitHub**:
+   * Log into your [Vercel Dashboard](https://vercel.com/).
+   * Click **Add New...** → **Project**.
+   * Import your GitHub repository (`thapelotipla76-byte/Cell2U`).
+
+2. **Configure Vercel Project Settings**:
+   * **Framework Preset**: Select **Other** (or leave as Static).
+   * **Root Directory**: Leave empty (`./`) or `./` (repository root).
+   * **Build Command**: Leave empty (since Cell2U is pure static HTML/CSS/JS).
+   * **Output Directory**: Leave empty or set to root (`.`).
+
+3. **Deploy**:
+   * Click **Deploy**. Vercel will instantly provision your live store on a secure `*.vercel.app` domain with automatic SSL and zero configuration.

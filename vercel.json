@@ -1,0 +1,9 @@
+{
+  "version": 2,
+  "public": true,
+  "routes": [
+    { "src": "/shop", "dest": "/shop.html" },
+    { "src": "/product", "dest": "/product.html" },
+    { "src": "/checkout", "dest": "/checkout.html" }
+  ]
+}
