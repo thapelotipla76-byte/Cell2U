@@ -26,3 +26,13 @@ The Huawei Y91 link redirected to a MobileStore page that returned a 404, so it 
 
 
 The supplied Huawei Nova 13i page exposed a direct image URL: `https://www.gsmarena.com.bd/images/products/Huawei-Nova-13i-Blue.webp`. The original page URL remains stored as `image_source` metadata.
+
+
+## Hotlink fallback verification
+
+The managed shop grid rendered several direct supplier image URLs successfully. The Huawei Y60 product detail view showed a failed remote image load, confirming that external hosts may block hotlinking. The catalogue will therefore retain each supplied URL in `image_source` and use an explicit `image_fallback` field when the remote image fails at runtime.
+
+
+## Fallback result
+
+After adding runtime fallback handling, the Huawei Y60 product detail page no longer shows a broken image. It displays the configured brand-level fallback while preserving the supplied remote URL in `image_source`.

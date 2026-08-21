@@ -206,7 +206,7 @@ function renderCartDrawer() {
     return `
       <div class="cart-item">
         <div class="cart-item-image">
-          <img src="${item.product.image}" alt="${item.product.name}">
+          <img src="${item.product.image}" alt="${item.product.name}" onerror="this.onerror=null;this.src='${item.product.image_fallback || 'images/catalogue/huawei-phone.jpg'}'">
         </div>
         <div class="cart-item-info">
           <div class="cart-item-name">${item.product.name}</div>
@@ -276,7 +276,7 @@ function renderProductCard(product) {
   return `
     <div class="product-card" onclick="window.location.href='product.html?id=${product.id}'">
       <div class="product-image">
-        <img src="${product.image}" alt="${product.name}" loading="lazy">
+        <img src="${product.image}" alt="${product.name}" loading="lazy" onerror="this.onerror=null;this.src='${product.image_fallback || 'images/catalogue/huawei-phone.jpg'}'">
         ${product.badge ? `<div class="product-badge ${badgeClass}">${product.badge}</div>` : ''}
         ${product.discount ? `<div class="product-discount">-${product.discount}%</div>` : ''}
         <button class="product-wishlist ${isWish ? 'active' : ''} wishlist-btn" data-id="${product.id}" onclick="event.stopPropagation(); toggleWishlist(${product.id});">
@@ -419,7 +419,7 @@ function initProductPage() {
     <div style="display:grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: start;">
       <div>
         <div style="background:white; border-radius:1.5rem; overflow:hidden; border:1px solid var(--border-grey); aspect-ratio:1/1; display:flex; align-items:center; justify-content:center; padding:2rem;">
-          <img src="${product.image}" alt="${product.name}" style="max-height:100%; object-fit:contain;">
+          <img src="${product.image}" alt="${product.name}" style="max-height:100%; object-fit:contain;" onerror="this.onerror=null;this.src='${product.image_fallback || 'images/catalogue/huawei-phone.jpg'}'">
         </div>
       </div>
       <div>

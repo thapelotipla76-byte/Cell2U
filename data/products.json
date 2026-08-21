@@ -24,7 +24,8 @@
       "description": "Huawei Y60 smartphone catalogue listing.",
       "features": [],
       "whatsInBox": [],
-      "image_source": "https://images.shopkees.com/uploads/cdn/images/1000/309623771_1658394616.jpg"
+      "image_source": "https://images.shopkees.com/uploads/cdn/images/1000/309623771_1658394616.jpg",
+      "image_fallback": "images/catalogue/huawei-phone.jpg"
     },
     {
       "id": 2,
@@ -48,7 +49,8 @@
       "description": "Huawei Y61 smartphone catalogue listing.",
       "features": [],
       "whatsInBox": [],
-      "image_source": "https://smartmobile.lk/image/cache/catalog/Huawei%20nova%20Y61-500x500.jpg"
+      "image_source": "https://smartmobile.lk/image/cache/catalog/Huawei%20nova%20Y61-500x500.jpg",
+      "image_fallback": "images/catalogue/huawei-phone.jpg"
     },
     {
       "id": 3,
@@ -72,7 +74,8 @@
       "description": "Huawei Y62 smartphone catalogue listing.",
       "features": [],
       "whatsInBox": [],
-      "image_source": "https://purchitall.com/cdn/shop/files/HuaweiNovaY62Plus_1.png?v=1730035458"
+      "image_source": "https://purchitall.com/cdn/shop/files/HuaweiNovaY62Plus_1.png?v=1730035458",
+      "image_fallback": "images/catalogue/huawei-phone.jpg"
     },
     {
       "id": 4,
@@ -96,7 +99,8 @@
       "description": "Huawei Y62 Plus smartphone catalogue listing.",
       "features": [],
       "whatsInBox": [],
-      "image_source": "https://purchitall.com/cdn/shop/files/HuaweiNovaY62Plus_1.png?v=1730035458"
+      "image_source": "https://purchitall.com/cdn/shop/files/HuaweiNovaY62Plus_1.png?v=1730035458",
+      "image_fallback": "images/catalogue/huawei-phone.jpg"
     },
     {
       "id": 5,
@@ -120,7 +124,8 @@
       "description": "Huawei Y70 smartphone catalogue listing.",
       "features": [],
       "whatsInBox": [],
-      "image_source": "https://www.mygsm.me/media/catalog/product/cache/cd27a0d6f4197d1b7e37983dff472110/image/19624ac5f/huawei-nova-y70-64gb-4gb-ram.webp"
+      "image_source": "https://www.mygsm.me/media/catalog/product/cache/cd27a0d6f4197d1b7e37983dff472110/image/19624ac5f/huawei-nova-y70-64gb-4gb-ram.webp",
+      "image_fallback": "images/catalogue/huawei-phone.jpg"
     },
     {
       "id": 6,
@@ -144,7 +149,8 @@
       "description": "Huawei Y70 Plus smartphone catalogue listing.",
       "features": [],
       "whatsInBox": [],
-      "image_source": "https://mymobileza.com/cdn/shop/files/HUAWEI_NOVA_Y70_PLUS_128GB_CRYSTAL_BLUE_DS_12269c9d-9fd3-495a-aee9-fb8927a56620.png?v=1736773817"
+      "image_source": "https://mymobileza.com/cdn/shop/files/HUAWEI_NOVA_Y70_PLUS_128GB_CRYSTAL_BLUE_DS_12269c9d-9fd3-495a-aee9-fb8927a56620.png?v=1736773817",
+      "image_fallback": "images/catalogue/huawei-phone.jpg"
     },
     {
       "id": 7,
@@ -168,7 +174,8 @@
       "description": "Huawei Y71 smartphone catalogue listing.",
       "features": [],
       "whatsInBox": [],
-      "image_source": "https://ak-asset.jarir.com/akeneo-prod/asset/4/2/5/7/4257f0e017232307cf3c1b9dcf1c7e0de790f2c6_618390.jpg"
+      "image_source": "https://ak-asset.jarir.com/akeneo-prod/asset/4/2/5/7/4257f0e017232307cf3c1b9dcf1c7e0de790f2c6_618390.jpg",
+      "image_fallback": "images/catalogue/huawei-phone.jpg"
     },
     {
       "id": 8,
@@ -192,7 +199,8 @@
       "description": "Huawei Y90 smartphone catalogue listing.",
       "features": [],
       "whatsInBox": [],
-      "image_source": "https://welectronics.com/shop/gsm-phones/huawei-nova-y90-ctr-lx2-emerald-green-128gb-6gb-ram-gsm-unlocked-phone-qualcomm-sm6225-snapdragon-680-4g-50mp-detail"
+      "image_source": "https://welectronics.com/shop/gsm-phones/huawei-nova-y90-ctr-lx2-emerald-green-128gb-6gb-ram-gsm-unlocked-phone-qualcomm-sm6225-snapdragon-680-4g-50mp-detail",
+      "image_fallback": "images/catalogue/huawei-phone.jpg"
     },
     {
       "id": 9,
@@ -216,7 +224,8 @@
       "description": "Huawei Y91 smartphone catalogue listing.",
       "features": [],
       "whatsInBox": [],
-      "image_source": "https://mobilestore.co.za/devices/huawei/Huawei-Nova-Y91"
+      "image_source": "https://mobilestore.co.za/devices/huawei/Huawei-Nova-Y91",
+      "image_fallback": "images/catalogue/huawei-phone.jpg"
     },
     {
       "id": 10,
@@ -240,7 +249,8 @@
       "description": "Huawei Nova 11i smartphone catalogue listing.",
       "features": [],
       "whatsInBox": [],
-      "image_source": "https://www.kickmobiles.com/images/thumbs/0072017_huawei-nova-11i_808.jpeg"
+      "image_source": "https://www.kickmobiles.com/images/thumbs/0072017_huawei-nova-11i_808.jpeg",
+      "image_fallback": "images/catalogue/huawei-phone.jpg"
     },
     {
       "id": 11,
@@ -264,7 +274,8 @@
       "description": "Huawei Nova 12i smartphone catalogue listing.",
       "features": [],
       "whatsInBox": [],
-      "image_source": "https://cdn.beebom.com/mobile/huawei-nova-12i-front-back.png"
+      "image_source": "https://cdn.beebom.com/mobile/huawei-nova-12i-front-back.png",
+      "image_fallback": "images/catalogue/huawei-phone.jpg"
     },
     {
       "id": 12,
@@ -288,7 +299,8 @@
       "description": "Huawei Nova 13i smartphone catalogue listing.",
       "features": [],
       "whatsInBox": [],
-      "image_source": "https://www.gsmarena.com.bd/pictures/huawei-nova-13i/"
+      "image_source": "https://www.gsmarena.com.bd/pictures/huawei-nova-13i/",
+      "image_fallback": "images/catalogue/huawei-phone.jpg"
     },
     {
       "id": 13,
@@ -312,7 +324,8 @@
       "description": "Samsung Galaxy A04e smartphone catalogue listing.",
       "features": [],
       "whatsInBox": [],
-      "image_source": "https://mdsmobile.ae/cdn/shop/products/835137-main.jpg?v=1754054420"
+      "image_source": "https://mdsmobile.ae/cdn/shop/products/835137-main.jpg?v=1754054420",
+      "image_fallback": "images/catalogue/samsung-phone.jpg"
     },
     {
       "id": 14,
@@ -336,7 +349,8 @@
       "description": "Samsung Galaxy A05s smartphone catalogue listing.",
       "features": [],
       "whatsInBox": [],
-      "image_source": "https://exitocol.vtexassets.com/arquivos/ids/33586707/Celular-SAMSUNG-A05s-128-MB-4-GB-RAM-Negro-3506342_a.jpg?v=639159153398700000"
+      "image_source": "https://exitocol.vtexassets.com/arquivos/ids/33586707/Celular-SAMSUNG-A05s-128-MB-4-GB-RAM-Negro-3506342_a.jpg?v=639159153398700000",
+      "image_fallback": "images/catalogue/samsung-phone.jpg"
     },
     {
       "id": 15,
@@ -360,7 +374,8 @@
       "description": "Samsung Galaxy A06 smartphone catalogue listing.",
       "features": [],
       "whatsInBox": [],
-      "image_source": "https://ism-mobileshop.com/cdn/shop/files/samsung-galaxy-a06-blue-p2_79c2ee36-53a3-4e81-bde3-f9188241d7e7.webp?v=1751129739"
+      "image_source": "https://ism-mobileshop.com/cdn/shop/files/samsung-galaxy-a06-blue-p2_79c2ee36-53a3-4e81-bde3-f9188241d7e7.webp?v=1751129739",
+      "image_fallback": "images/catalogue/samsung-phone.jpg"
     },
     {
       "id": 16,
@@ -384,7 +399,8 @@
       "description": "Samsung Galaxy A15 smartphone catalogue listing.",
       "features": [],
       "whatsInBox": [],
-      "image_source": "https://smartprice.odoo.com/web/image/product.template/2037/image_1024/Samsung%20Galaxy%20A15%205G?unique=34359e9"
+      "image_source": "https://smartprice.odoo.com/web/image/product.template/2037/image_1024/Samsung%20Galaxy%20A15%205G?unique=34359e9",
+      "image_fallback": "images/catalogue/samsung-phone.jpg"
     },
     {
       "id": 17,
@@ -408,7 +424,8 @@
       "description": "Samsung Galaxy A16 smartphone catalogue listing.",
       "features": [],
       "whatsInBox": [],
-      "image_source": "https://cdn.mafrservices.com/pim-content/EGY/media/product/645022/1733311369/645022_main.jpg"
+      "image_source": "https://cdn.mafrservices.com/pim-content/EGY/media/product/645022/1733311369/645022_main.jpg",
+      "image_fallback": "images/catalogue/samsung-phone.jpg"
     },
     {
       "id": 18,
@@ -432,7 +449,8 @@
       "description": "Samsung Galaxy A24 smartphone catalogue listing.",
       "features": [],
       "whatsInBox": [],
-      "image_source": "https://shop.samsung.com/latin/cac/pub/media/catalog/product/s/m/sm-a245_galaxy-a24lte_all-1_thumb_1.png"
+      "image_source": "https://shop.samsung.com/latin/cac/pub/media/catalog/product/s/m/sm-a245_galaxy-a24lte_all-1_thumb_1.png",
+      "image_fallback": "images/catalogue/samsung-phone.jpg"
     },
     {
       "id": 19,
@@ -456,7 +474,8 @@
       "description": "Samsung Galaxy A25 smartphone catalogue listing.",
       "features": [],
       "whatsInBox": [],
-      "image_source": "https://upload.cdn.baselinker.com/products/4023849/5018de0febd0aaa46603ed9d808a5c7c.jog"
+      "image_source": "https://upload.cdn.baselinker.com/products/4023849/5018de0febd0aaa46603ed9d808a5c7c.jog",
+      "image_fallback": "images/catalogue/samsung-phone.jpg"
     },
     {
       "id": 20,
@@ -480,7 +499,8 @@
       "description": "Samsung Galaxy A33 smartphone catalogue listing.",
       "features": [],
       "whatsInBox": [],
-      "image_source": "https://www.elkjop.no/image/dv_web_D180001002938347/414943/samsung-galaxy-a33-5g-smarttelefon-6128gb-sort.jpg"
+      "image_source": "https://www.elkjop.no/image/dv_web_D180001002938347/414943/samsung-galaxy-a33-5g-smarttelefon-6128gb-sort.jpg",
+      "image_fallback": "images/catalogue/samsung-phone.jpg"
     },
     {
       "id": 21,
@@ -504,7 +524,8 @@
       "description": "Samsung Galaxy A34 smartphone catalogue listing.",
       "features": [],
       "whatsInBox": [],
-      "image_source": "https://texnohome.az/image/cache/catalog/Hesen/Telefonlar%202/g1-1500x1500.jpg"
+      "image_source": "https://texnohome.az/image/cache/catalog/Hesen/Telefonlar%202/g1-1500x1500.jpg",
+      "image_fallback": "images/catalogue/samsung-phone.jpg"
     },
     {
       "id": 22,
@@ -528,7 +549,8 @@
       "description": "Samsung Galaxy A35 smartphone catalogue listing.",
       "features": [],
       "whatsInBox": [],
-      "image_source": "https://cdn.mobilecity.vn/mobilecity-vn/images/2024/03/samsung-galaxy-a35-den.jpg"
+      "image_source": "https://cdn.mobilecity.vn/mobilecity-vn/images/2024/03/samsung-galaxy-a35-den.jpg",
+      "image_fallback": "images/catalogue/samsung-phone.jpg"
     },
     {
       "id": 23,
@@ -552,7 +574,8 @@
       "description": "Honor X5 smartphone catalogue listing.",
       "features": [],
       "whatsInBox": [],
-      "image_source": "https://www.jibalzone.com/media/5546/conversions/651d0571b526a_ffc81807d71c6f6a1cabb2b6df31308b45b0715a_622067-slider.jpg"
+      "image_source": "https://www.jibalzone.com/media/5546/conversions/651d0571b526a_ffc81807d71c6f6a1cabb2b6df31308b45b0715a_622067-slider.jpg",
+      "image_fallback": "images/catalogue/honor-phone.jpg"
     },
     {
       "id": 24,
@@ -576,7 +599,8 @@
       "description": "Honor X5B smartphone catalogue listing.",
       "features": [],
       "whatsInBox": [],
-      "image_source": "https://rawabihypermarket.com/uploads/product_images/featured_image/Honor_X5b_4g_4gb_Ram_64gb_Blue316129.JPG"
+      "image_source": "https://rawabihypermarket.com/uploads/product_images/featured_image/Honor_X5b_4g_4gb_Ram_64gb_Blue316129.JPG",
+      "image_fallback": "images/catalogue/honor-phone.jpg"
     },
     {
       "id": 25,
@@ -600,7 +624,8 @@
       "description": "Honor X6a smartphone catalogue listing.",
       "features": [],
       "whatsInBox": [],
-      "image_source": "https://tecmovilperu.com/api/scrooge/file/FL-7AAA9355?v=-1"
+      "image_source": "https://tecmovilperu.com/api/scrooge/file/FL-7AAA9355?v=-1",
+      "image_fallback": "images/catalogue/honor-phone.jpg"
     },
     {
       "id": 26,
@@ -624,7 +649,8 @@
       "description": "Honor X6B smartphone catalogue listing.",
       "features": [],
       "whatsInBox": [],
-      "image_source": "https://www.xmart.jo/cdn/shop/files/a912ccdc-4ad5-4ec3-a1db-2c1ed5e7bb63-1000x1000-mFhqYARjTvTlPTt2HUVIksGOAKsPT87XS7oFLhzp.webp?v=1746348387"
+      "image_source": "https://www.xmart.jo/cdn/shop/files/a912ccdc-4ad5-4ec3-a1db-2c1ed5e7bb63-1000x1000-mFhqYARjTvTlPTt2HUVIksGOAKsPT87XS7oFLhzp.webp?v=1746348387",
+      "image_fallback": "images/catalogue/honor-phone.jpg"
     },
     {
       "id": 27,
@@ -648,7 +674,8 @@
       "description": "Honor X7B smartphone catalogue listing.",
       "features": [],
       "whatsInBox": [],
-      "image_source": "https://ak-asset.jarir.com/akeneo-prod/asset/4/e/9/9/4e998931fa77943c3905e391b5ea783d9c24b726_628461.jpg"
+      "image_source": "https://ak-asset.jarir.com/akeneo-prod/asset/4/e/9/9/4e998931fa77943c3905e391b5ea783d9c24b726_628461.jpg",
+      "image_fallback": "images/catalogue/honor-phone.jpg"
     },
     {
       "id": 28,
@@ -672,7 +699,8 @@
       "description": "Oppo A38 smartphone catalogue listing.",
       "features": [],
       "whatsInBox": [],
-      "image_source": "https://media.extra.com/i/aurora/100362501_100_09?fmt=auto&w=721"
+      "image_source": "https://media.extra.com/i/aurora/100362501_100_09?fmt=auto&w=721",
+      "image_fallback": "images/catalogue/oppo-phone.jpg"
     },
     {
       "id": 29,
@@ -696,7 +724,8 @@
       "description": "Oppo A40 smartphone catalogue listing.",
       "features": [],
       "whatsInBox": [],
-      "image_source": "https://s3-ap-southeast-2.amazonaws.com/wc-prod-pim/JPEG_1000x1000/OPPOA40BLK_oppo_a40_4g_128gb_sparkle_black.jpg"
+      "image_source": "https://s3-ap-southeast-2.amazonaws.com/wc-prod-pim/JPEG_1000x1000/OPPOA40BLK_oppo_a40_4g_128gb_sparkle_black.jpg",
+      "image_fallback": "images/catalogue/oppo-phone.jpg"
     },
     {
       "id": 30,
@@ -720,7 +749,8 @@
       "description": "Oppo A58 smartphone catalogue listing.",
       "features": [],
       "whatsInBox": [],
-      "image_source": "https://webstoreshops.com/cdn/shop/files/OppoA58Black-1.jpg?v=1737530499"
+      "image_source": "https://webstoreshops.com/cdn/shop/files/OppoA58Black-1.jpg?v=1737530499",
+      "image_fallback": "images/catalogue/oppo-phone.jpg"
     },
     {
       "id": 31,
@@ -744,7 +774,8 @@
       "description": "Oppo A60 smartphone catalogue listing.",
       "features": [],
       "whatsInBox": [],
-      "image_source": "https://plazait.co.id/uploads/products/gallery/oppo-a60-8-256gb-garansi-resmi-1763111230-818.jpg"
+      "image_source": "https://plazait.co.id/uploads/products/gallery/oppo-a60-8-256gb-garansi-resmi-1763111230-818.jpg",
+      "image_fallback": "images/catalogue/oppo-phone.jpg"
     }
   ],
   "categories": [
