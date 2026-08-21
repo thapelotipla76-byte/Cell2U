@@ -101,3 +101,21 @@ If you prefer deploying Cell2U to Vercel for a professional, clean subdomain URL
 
 3. **Deploy**:
    * Click **Deploy**. Vercel will instantly provision your live store on a secure `*.vercel.app` domain with automatic SSL and zero configuration.
+
+
+---
+
+## 6. Managing Catalogue Images
+
+Each catalogue item now has an image path in `data/products.json`. The current package includes representative brand-level assets under `images/catalogue/` for Huawei, Samsung, Honor, and Oppo. These are suitable for the storefront layout but are not official model-specific product photographs.
+
+To replace an image, add a new owned or properly licensed image under `images/catalogue/`, then update the matching product's `image` field in `data/products.json`. Keep the path relative to the site root, for example `images/catalogue/huawei-y60.jpg`. Commit the image and JSON together so the product card and product detail page stay synchronized.
+
+
+---
+
+## 7. User-Supplied Image Sources
+
+The catalogue records now include an `image_source` field for the links supplied for each listed model. Direct image URLs are used as the visible `image` value. When a supplied URL is a product page rather than an image file, the page URL remains available as `image_source` and the storefront uses a renderable fallback image so the product card does not break.
+
+Before commercial use, confirm that you have permission to display each externally hosted image. For long-term reliability, download licensed images into `images/catalogue/` and update the product's `image` field to a local path while retaining the original URL in `image_source` for reference.
